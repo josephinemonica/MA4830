@@ -190,7 +190,7 @@ void input_N(int* N_)
     if(s==0)
     {
         printf("ERR: Invalid argument. Input is not an integer.\n");
-        input_mode(N_);                //ask the user to reenter mode
+        input_N(N_);                //ask the user to reenter mode
     }
     else if(*N_<2)
     {
