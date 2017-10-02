@@ -184,19 +184,19 @@ void input_N(int* N_)
     
     int s;  //scanf return value
     s=scanf("%d",N_);
-    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of correct type
+    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of the correct type
     
     //check if input is not integer
     if(s==0)
     {
         printf("ERR: Invalid argument. Input is not an integer.\n");
-        input_N(N_);                //ask the user to reenter mode
+        input_N(N_);                //ask the user to reenter N
     }
     else if(*N_<2)
     {
         printf("ERR: Invalid argument. N must be at least 2\n");
-        input_N(N_);
-    }
+        input_N(N_);                //ask the user to reenter N
+    }   
 }
 
 double compute_d(double teta_, double v_, double y_)
@@ -215,7 +215,7 @@ void input_angle(double* teta_)
     
     int s;
     s=scanf("%lf",teta_);
-    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of correct type
+    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of the correct type
     
     if(s==0)
     {   
@@ -237,12 +237,12 @@ void input_velocity(double* v_)
     
     int s;
     s=scanf("%lf",v_);
-    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of correct type
+    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of the correct type
     
     if(s==0)
     {   
         printf("ERR: Invalid argument. Input is not a double type.\n");
-        input_velocity(v_); //ask the user to reenter avelocity
+        input_velocity(v_); //ask the user to reenter velocity
     }
     else if(*v_<0)
     {
@@ -258,12 +258,12 @@ void input_y(double* y_)
     
     int s;
     s=scanf("%lf",y_);
-    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of correct type
+    while ((getchar()) != '\n');    //flush the scanf buffer. This is especially useful when the argument is not of the correct type
     
     if(s==0)
     {
         printf("ERR: Invalid argument. Input is not a double type.\n");
-        input_y(y_); //ask the user to reenter avelocity
+        input_y(y_); //ask the user to reenter y
     }
     else if(*y_<0)
     {
